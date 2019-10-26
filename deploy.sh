@@ -1,5 +1,5 @@
 DEST='/var/www/'
 
-cp -r ./html $DEST
-cp -r ./css $DEST
-cp -r ./js $DEST
+sudo cp -r ./html $DEST
+sudo cp -r ./css $DEST
+sudo cp -r ./js $DEST
