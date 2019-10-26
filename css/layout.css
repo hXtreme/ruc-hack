@@ -1,3 +1,25 @@
 .body-layout {
+  display: grid;
+  grid-template-areas:
+  'search map map map'
+  'new map map map'
+  'list map map map'
+  'list map map map'
+  'list map map map';
+}
 
+.search-layout {
+  grid-area: search;
+}
+
+.add-new-layout {
+  grid-area: new;
+}
+
+.listing-layout {
+  grid-area: list;
+}
+
+#map {
+  grid-area: map;
 }
