@@ -2,12 +2,32 @@ var map;
 
 var markers = [];
 
+function getInfoWindow(location) {
+  var content = '<div class="infowindow">'+
+              '<img class="info-img" src="'+
+              location.img +
+              '">' +
+              '<p>' +
+              location.review +
+              '</p>' +
+              '</div>';
+  var infowindow = new google.maps.InfoWindow({content: content});
+  return infowindow;
+}
+
 function placeMarker(map, location) {
   var latLng = {lat: location.lat, lng:location.lng}
   var marker = new google.maps.Marker({
     position: latLng,
     map: map,
     title: location.name
+  });
+  markers.push(marker);
+
+  var infowindow = getInfoWindow(location);
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
   });
 }
 
@@ -306,6 +326,6 @@ function initMap() {
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
 
-  var loc = {lat: 39.950173, lng: -75.126592, name:'Please Work'}
+  var loc = {lat: 39.950173, lng: -75.126592, name:'Please Work', img:'https://www.naturalhealth365.com/wp-content/uploads/2017/11/drinking-water.jpg', review: getReview()}
   placeMarker(map, loc)
 }
