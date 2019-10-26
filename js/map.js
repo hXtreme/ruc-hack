@@ -1,5 +1,16 @@
 var map;
 
+var markers = [];
+
+function placeMarker(map, location) {
+  var latLng = {lat: location.lat, lng:location.lng}
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: map,
+    title: location.name
+  });
+}
+
 
 function initMap() {
   var styledMapType = new google.maps.StyledMapType(
@@ -294,4 +305,7 @@ function initMap() {
 
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
+
+  var loc = {lat: 39.950173, lng: -75.126592, name:'Please Work'}
+  placeMarker(map, loc)
 }
