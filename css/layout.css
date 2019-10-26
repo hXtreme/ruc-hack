@@ -1,11 +1,12 @@
 .body-layout {
   display: grid;
   grid-template-areas:
-  'search map map map'
-  'new map map map'
-  'list map map map'
-  'list map map map'
-  'list map map map';
+  'search map map map map'
+  'new map map map map'
+  'list map map map map'
+  'list map map map map'
+  'list map map map map';
+  grid-gap: 10px;
 }
 
 .search-layout {

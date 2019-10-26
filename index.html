@@ -3,18 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>//TODO: Enter title</title>
+    <script type="text/javascript" src="/js/fountain_locations.js"></script>
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/map.css">
     <script type="text/javascript" src="/js/review.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   </head>
   <body class='body-layout'>
     <div class="search-layout">
-      <div class="text-search">
-        Text Search
-      </div>
       <div class="voice-search">
-        Voice search
+        <button class="mdc-fab" aria-label="Favorite">
+          <div class="mdc-fab__icon material-icons">settings_voice</div>
+        </button>
+      </div>
+      <div class="text-search">
+        <div class="mdc-text-field">
+          <input class="mdc-text-field__input" id="text-field-hero-input">
+          <div class="mdc-line-ripple"></div>
+        </div>
+
       </div>
     </div>
     <div class="add-new-layout">

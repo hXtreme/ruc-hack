@@ -20,7 +20,7 @@ function placeMarker(map, location) {
   var marker = new google.maps.Marker({
     position: latLng,
     map: map,
-    title: location.name
+    title: location.brand
   });
   markers.push(marker);
 
@@ -326,6 +326,6 @@ function initMap() {
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
 
-  var loc = {lat: 39.950173, lng: -75.126592, name:'Please Work', img:'https://www.naturalhealth365.com/wp-content/uploads/2017/11/drinking-water.jpg', review: getReview()}
+  var loc = {lat: 39.950173, lng: -75.126592, brand:'Please Work', img:'https://www.naturalhealth365.com/wp-content/uploads/2017/11/drinking-water.jpg', review: getReview()}
   placeMarker(map, loc)
 }
