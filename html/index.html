@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>//TODO: Enter title</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
   </head>
   <body class='body-layout'>
     <div class="search-layout">
@@ -13,11 +14,24 @@
         Voice search
       </div>
     </div>
+    <div class="add-new-layout">
+      Add new
+    </div>
     <div class="listing-layout">
       listing-layout
     </div>
-    <div class="map">
-      map
+    <div id="map">
+      <iframe
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDCjT3aBbepxFzYscvDws81b2RLms_QxoY
+        &q=Space+Needle,Seattle+WA" allowfullscreen
+      />
     </div>
+    <!-- Load Google api -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCjT3aBbepxFzYscvDws81b2RLms_QxoY&callback=initMap">
+    </script>
   </body>
 </html>
