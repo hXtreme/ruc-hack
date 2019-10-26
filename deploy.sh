@@ -1,5 +1,5 @@
 DEST='/var/www/'
 
-cp ./html $DEST
-cp ./css $DEST
-cp ./js $DEST
+cp -r ./html $DEST
+cp -r ./css $DEST
+cp -r ./js $DEST
