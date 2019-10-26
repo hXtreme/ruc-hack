@@ -16,7 +16,7 @@ function getInfoWindow(location) {
 }
 
 function placeMarker(map, location) {
-  var latLng = {lat: location.lat, lng:location.lng}
+  var latLng = {lat: parseFloat(location.lat), lng:parseFloat(location.lng)}
   var marker = new google.maps.Marker({
     position: latLng,
     map: map,
