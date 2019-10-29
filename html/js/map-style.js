@@ -1,4 +1,4 @@
-[
+map_style = [
   {
     "elementType": "geometry",
     "stylers": [
