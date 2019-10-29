@@ -1,28 +1,13 @@
-
-function search() {
-	var results = [];
-	// var toSearch = JSON.parse(document.getElementById("search-inp").value);
-var toSearch = document.getElementById('search-inp').value;
-	console.log(toSearch);
-	console.log(typeof toSearch);
-	console.log(JSON.parse(toSearch));
-
-	var delta = 10;
+function search(position) {
+	var delta = 0.1;
+	var lat = position.coords.latitude;
+	var lng = position.coords.longitude;
 	for(var i=0; i<fountain.length; i++) {
-		placeMarker(map, fountain[i]);
-		if ((Math.abs(fountain[i].lat - toSearch.lat)< delta) && (Math.abs(fountain[i].lng - toSearch.lng)< delta))
-	  {
-	  	placeMarker(map, fountain[i]);
-	  }
+		var f = fountain[i];
+		var dlat = Math.abs(f.lat - lat);
+		var dlng = Math.abs(f.lng - lng);
+		if (dlat < delta && dlng < delta) {
+			placeMarker(map, f);
+		}
 	}
-}
-
-
-function place_results(map, results)
-{
-	for (var key in results) {
-		console.log(key);
-	    placeMarker(map, key);
-	}
-
 }

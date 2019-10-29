@@ -22,11 +22,11 @@
         </button>
       </div>
       <div class="text-search">
-        <div class="mdc-text-field">
+        <!-- <div class="mdc-text-field">
           <input id="search-inp" class="mdc-text-field__input" id="text-field-hero-input">
           <div class="mdc-line-ripple"></div>
-        </div>
-        <button id="search-button" class="mdc-button" onclick="search()">Search</button>
+        </div> -->
+        <button id="search-button" class="mdc-button" onclick="navigator.geolocation.getCurrentPosition(search)">Search</button>
       </div>
     </div>
     <div class="add-new-layout">
@@ -40,7 +40,7 @@
     <!-- Load Google api -->
     <script type="text/javascript" src="/js/map.js"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh6CzTZRjvm3HJNAJOgVkRhS4cu47dSrM&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh6CzTZRjvm3HJNAJOgVkRhS4cu47dSrM&callback=initMap&libraries=geometry">
     </script>
   </body>
 </html>
