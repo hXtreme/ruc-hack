@@ -2,6 +2,8 @@ var map;
 
 var markers = [];
 
+var user_marker = null;
+
 function getInfoWindow(location) {
   var content = '<div class="infowindow">'+
               '<img class="info-img" src="'+
@@ -13,6 +15,12 @@ function getInfoWindow(location) {
               '</div>';
   var infowindow = new google.maps.InfoWindow({content: content});
   return infowindow;
+}
+
+function clearMarkers() {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
 }
 
 function placeMarker(map, location) {
