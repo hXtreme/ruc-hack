@@ -31,7 +31,9 @@ function placeMarker(map, location) {
     title: location.brand
   });
   markers.push(marker);
-
+  if (location.review == null) {
+    location.review = getReview()
+  }
   var infowindow = getInfoWindow(location);
 
   marker.addListener('click', function() {
